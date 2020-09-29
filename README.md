@@ -62,26 +62,31 @@ Your repository must contain the following:
 
 ### Suggestions and Tips:
 - Using Python requests to download data with less structure is harder than using Datareader,
-and will be taken into consideration when grading.  You can still get full credit using
-Datareader, but plan to put more work into a different part of your project in that case.
+or using requests to download a plain csv document, and will be taken into consideration when 
+grading.  You can still get full credit using Datareader, but plan to put more work into a 
+different part of your project in that case.
 - Anywhere you can use things we learned in Data Skills 1 or 2, in a way that is relevant to 
 your project, is a good idea.  For example, cleaning up your plots using some MatPlotLib 
 methods we discussed is better than turning in vanilla MatPlotLib output, using formatting 
 and other functions to clean up your data is better than displaying the same output in a 
 messy fashion, and so on.
+- You may use libraries and methods we did not go over in class, but ones that we did go over
+should be preferred if they duplicate the functionality.  Remember all citation rules from 
+the academic dishonesty policy in the syllabus.
 - Effort put into organizing your code and making it readable, by, for example, following the
 Python Style Guide and good usage of functions and variable names, will be rewarded.
+- If you feel stuck coming up with research ideas, feel free to contact me or one of the TAs
+so we can discuss your interests and make suggestions.
 - Common merging and grouping parameters:
   - State
   - Country
   - Date
   - Names
-- If you feel stuck coming up with research ideas, feel free to contact me or one of the TAs
-so we can discuss your interests and make suggestions.
 - If your research idea is a much larger project, think of how you can develop a basic framework
 for it using this project, which can then later be expanded into a proper research project.
 - Remember that the point here is to showcase your Python coding, so do not get hung up for too
 long on questions of research methodology.
 - The entire point of reproducible research is to make it possible for others (and for a future
 you who has had time to forget what you did and why) to understand, replicate, and modify your
-work.  Keeping this in mind as you work will be helpful.
+work.  Keeping this in mind as you work will be good for your grade, and helpful to you in the
+future if you expand on the project.
