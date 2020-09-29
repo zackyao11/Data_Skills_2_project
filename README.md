@@ -8,16 +8,45 @@
 
 ## Due: Sunday, December 6th by midnight on GitHub
 
-### Instructions:
+### Introduction:
 The goal of this project is to showcase your knowledge of Python by applying it to a 
 research project of your own.  This is not a research methods course, so the quality of the
 research is ancillary to the quality of your programming.
 
+### Project Description:
+Your task is to find a minimum of two datasets available online, and then use Python to
+download them using requests or Pandas, merge or concatenate them together, summarize the data 
+with plots, tables and summary statistics, and then fit a simple model to it using Numpy, 
+Scikit Learn, or Statsmodels.  The entire program must be organized using functions and/or 
+classes, and it must run from start (downloading) to finish (making graphs, displaying tables, 
+and model fitting) without stopping or requiring manual steps.  The use of other skills we have
+or will learn in class, such as natural language processing, PDF scraping, and spatial data,
+will be rewarded.
+
+At least one part of your project should be challenging, and exhibit your coding skills.  For 
+example, if you download two very easy datasets that are nicely structured and ready to work 
+with, maybe you create some very elaborate plots.  If you instead download a very difficult
+dataset that requires scraping unstructured data and complicated reshaping and merging, then
+maybe you create some more straight-forward plots.  If both your plots and your data are
+relatively simple, maybe you use natural language processing. 
+
+You will then spend *no more than* 2-5 pages writing your research findings up.  This is where 
+you can discuss limitations as well.  For example, if you used an OLS model and got weak results, 
+you might discuss what model you would have used in future research, or what additional data you
+would want to find, or why the OLS wasn't a good choice.  Think of this writeup as a guide to 
+your code, as much as it is an explanation of your research.  It should inform me of what I'm 
+reading before I look at your code, so I am not trying to puzzle it out at the same time.
+
+### Instructions
 You may work on this project *alone* or in groups of *no more than three people*.  If you choose
 to work alone, you will use your own repository like normal.  If you choose to use a group, you
-must create your own team, [according to the instructions here](https://github.blog/2018-03-06-how-to-use-group-assignments-in-github-classroom/)
+must create your own team, [according to the instructions here](https://github.blog/2018-03-06-how-to-use-group-assignments-in-github-classroom/).
 
-It is required that you use GitHub, and I *will* use your past commits to understand your thought
+If there is a chance you will work in a group, do not create an individual repository and do not
+commit any code.  Wait until you form a group, and then create a group repo.  *Once code has been *
+*committed to a project, no group may be formed or added to.*
+
+It is required that you use GitHub, and I will use your past commits to understand your thought
 process for partial credit, and to monitor group participation.  You will not get full credit if
 your repository does not show multiple commits as you build your project, especially for groups.
 Expectations for the scope of the project will be higher for groups than for individuals, and the
@@ -26,21 +55,6 @@ history in grading, so while I will lean toward giving the same grade to everyon
 is possible that group members will recieve different grades.
 
 The link to create your project repository is available [here](https://classroom.github.com/g/V85WM5hs).
-
-If there is a chance you will work in a group, do not create an individual repository and do not
-commit any code.  Wait until you form a group, and then create a group repo.  *Once code has been 
-committed to a project, no group may be formed or added to.  *And remember that a proper commit *
-*history will be a part of your grade.*
-
-------
-
-### Project Description:
-Your task is to find a minimum of two datasets available online, and then use Python to
-download them using requests or Pandas, merge or concatenate them together, summarize the data 
-with plots, tables and summary statistics, and then fit a simple model to it using Numpy, 
-Scikit Learn, or Statsmodels.  The entire program must be organized using functions and/or 
-classes, and it must run from start (downloading) to finish (making graphs, displaying tables, 
-and model fitting) without stopping or requiring manual steps.
 
 Any local path references must be defined in a logical way that allows me (or your groupmates)
 to clone the repository and get to work with minimal changes (e.g. no more than one line of 
@@ -51,14 +65,7 @@ Remote retrieval of datasets should have a method of toggling the download attem
 either a setting or by looking to see if the files are already downloaded.  This is best practice,
 and will save me from having to download data for the entire class.
 
-You will then spend *no more than* 1-5 pages writing your research findings up.  This is where 
-you can discuss limitations as well.  For example, if you used an OLS model and got weak results, 
-you might discuss what model you would have used in future research, or what additional data you
-would want to find, or why the OLS wasn't a good choice.  Think of this writeup as a guide to 
-your code, as much as it is an explanation of your research.  It should inform me of what I'm 
-reading before I look at your code, so I am not trying to puzzle it out at the same time.
-
-Your repository must contain the following: 
+Your final repository must contain the following: 
 1. Your code and commit history
 2. The initial, *unmodified* dataframes you download
 3. Saved .png versions of your plots
