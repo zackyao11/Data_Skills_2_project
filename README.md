@@ -25,6 +25,13 @@ division of labor will be up to each group.  Note again that I will be using you
 history in grading, so while I will lean toward giving the same grade to everyone in a group, it 
 is possible that group members will recieve different grades.
 
+The link to create your project repository is available [here](https://classroom.github.com/g/V85WM5hs).
+
+If there is a chance you will work in a group, do not create an individual repository and do not
+commit any code.  Wait until you form a group, and then create a group repo.  *Once code has been 
+committed to a project, no group may be formed or added to.  *And remember that a proper commit *
+*history will be a part of your grade.*
+
 ------
 
 ### Project Description:
