@@ -8,12 +8,11 @@
 
 ## Due: Sunday, December 6th by midnight on GitHub
 
-### Introduction:
+### Project Description:
 The goal of this project is to showcase your knowledge of Python by applying it to a 
 research project of your own.  This is not a research methods course, so the quality of the
 research is ancillary to the quality of your programming.
 
-### Project Description:
 Your task is to find a minimum of two datasets available online, and then use Python to
 download them using requests or Pandas, merge or concatenate them together, summarize the data 
 with plots, tables and summary statistics, and then fit a simple model to it using Numpy, 
@@ -23,28 +22,29 @@ and model fitting) without stopping or requiring manual steps.  The use of other
 or will learn in class, such as natural language processing, PDF scraping, and spatial data,
 will be rewarded.
 
+### Instructions
 At least one part of your project should be challenging, and exhibit your coding skills.  For 
 example, if you download two very easy datasets that are nicely structured and ready to work 
 with, maybe you create some very elaborate plots.  If you instead download a very difficult
 dataset that requires scraping unstructured data and complicated reshaping and merging, then
 maybe you create some more straight-forward plots.  If both your plots and your data are
-relatively simple, maybe you use natural language processing. 
+relatively simple, maybe you use natural language processing.  If you are in a group, you will
+likely need more than one challenging section.
 
-You will then spend *no more than* 2-5 pages writing your research findings up.  This is where 
+You will then spend **no more than 2-5 pages** writing your research findings up.  This is where 
 you can discuss limitations as well.  For example, if you used an OLS model and got weak results, 
 you might discuss what model you would have used in future research, or what additional data you
 would want to find, or why the OLS wasn't a good choice.  Think of this writeup as a guide to 
 your code, as much as it is an explanation of your research.  It should inform me of what I'm 
 reading before I look at your code, so I am not trying to puzzle it out at the same time.
 
-### Instructions
 You may work on this project *alone* or in groups of *no more than three people*.  If you choose
 to work alone, you will use your own repository like normal.  If you choose to use a group, you
 must create your own team, [according to the instructions here](https://github.blog/2018-03-06-how-to-use-group-assignments-in-github-classroom/).
 
 If there is a chance you will work in a group, do not create an individual repository and do not
-commit any code.  Wait until you form a group, and then create a group repo.  *Once code has been *
-*committed to a project, no group may be formed or added to.*
+commit any code.  Wait until you form a group, and then create a group repo.  *Once code has*
+*been committed to a project, no group may be formed or added to.*
 
 It is required that you use GitHub, and I will use your past commits to understand your thought
 process for partial credit, and to monitor group participation.  You will not get full credit if
@@ -75,10 +75,6 @@ Your final repository must contain the following:
 ------
 
 ### Suggestions and Tips:
-- Using Python requests to download data with less structure is harder than using Datareader,
-or using requests to download a plain csv document, and will be taken into consideration when 
-grading.  You can still get full credit using Datareader, but plan to put more work into a 
-different part of your project in that case.
 - Anywhere you can use things we learned in Data Skills 1 or 2, in a way that is relevant to 
 your project, is a good idea.  For example, cleaning up your plots using some MatPlotLib 
 methods we discussed is better than turning in vanilla MatPlotLib output, using formatting 
