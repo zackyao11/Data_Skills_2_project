@@ -5,6 +5,11 @@ import calendar
 from functools import reduce
 import os
 import time
+import warnings
+import seaborn as sns
+import matplotlib.pyplot as plt
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 
 path = r'/Users/suxinyun/Documents/GitHub/Data_Skills_2_project/'
 
@@ -84,23 +89,31 @@ merged1
 # source: https://stackoverflow.com/questions/55941595/how-to-convert-timestamp-into-string-in-python
 # source: https://www.geeksforgeeks.org/create-a-list-from-rows-in-pandas-dataframe/
 # source: https://stackoverflow.com/questions/3743222/how-do-i-convert-a-datetime-to-date
+gender = merged1[["DATE", "Unemp Rate", "Unemp Rate_Male", "Unemp Rate_Female"]].dropna()
+gender = gender.set_index('DATE').stack()
+gender = pd.DataFrame(gender).reset_index()
+gender
+gender = gender.rename(columns={'level_1':'gender',0:'unemp rate'})
+
+plt.style.use('ggplot')
+fig, ax = plt.subplots(figsize=(10,7), dpi = 200)
+
+sns.barplot('DATE', 'unemp rate', hue='gender',data=gender, color='slateblue',ci=0)
+legend = ax.legend()
+legend.texts[0].set_text("all")
+legend.texts[1].set_text("male")
+legend.texts[2].set_text("female")
+plt.title('Unemployment Rate from October 2019 to November 2020', loc='Center', fontsize=14)
+plt.ylabel('Unemployment Rate')
+plt.xlabel('Month')
+plt.xticks(rotation=30, fontsize=8)
+plt.savefig(os.path.join(path, 'unemployment rate for men and women.png'))
+
+# source: https://stackoverflow.com/questions/6390393/matplotlib-make-tick-labels-font-size-smaller
 
 
 
 
-
-
-
-
-temp_month = merged.groupby(merged.DateTime.dt.month)[['Date']].size().to_frame('Count').reset_index()
-
-plt.style.use('bmh')
-plt.figure(figsize=(10,5))
-sns.barplot('DateTime', 'Count', data=temp_month, color='slateblue', linewidth=2)
-plt.xticks(temp_month.index, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
-plt.xlabel('Month', fontsize=10)
-plt.ylabel('Count', fontsize=10)
-plt.title('Count of accidents by Month', loc='Center', fontsize=14)
 
 
 # def date_to_month(df):
