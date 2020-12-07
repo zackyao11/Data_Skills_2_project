@@ -15,6 +15,7 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 path = r'/Users/suxinyun/Documents/GitHub/Data_Skills_2_project/'
 
 # download data from fred
+# because the data are directly downloaded from fred, there are no initial, unmodified dataframes in the repository
 start = datetime.datetime(2019,10,1)
 end = datetime.datetime(2020,9,1)
 def load_data(category, colname):
