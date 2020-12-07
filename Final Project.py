@@ -48,7 +48,7 @@ def check_exist(df, filename):
     if not os.path.exists(filename):
         df.to_csv(os.path.join(path, filename)) 
 
-check_exist(merged,'Complete Dataframe.csv')
+check_exist(merged,'Dataframe.csv')
 
 # change the datetime data(e.g.2019-10-01) to only month(October)
 
@@ -168,42 +168,25 @@ merged['DATE'] = pd.to_datetime(merged['DATE'])
 row_list = extract_datetime(merged)
 month = create_month(row_list)
 merged2 = date_to_month(merged)
+merged2 = merged2.reset_index()
 
-wave = ['Pre-Corona','First Wave', 'Second Wave','Third Wave']
+check_exist(merged2,'Complete Dataframe.csv')
+
+#create a plot for plotting 
+wave = ['Pre-Corona','First Wave', 'Second Wave']
 def clean_data(df):
-    df = df.reset_index()
     df['DATE'] = df['DATE'].astype(str)
     df1 = df[['DATE','Covid Wave','Unemp Rate']]
-    udf1 = df1.set_index(['DATE','Covid Wave'])
+    df1 = df1.set_index(['DATE','Covid Wave'])
     df1 = df1.unstack().reindex(df1.index.get_level_values(0))
     df1.columns = df1.columns.droplevel(0)
     df1 = df1[wave]
     df1 = df1.reset_index()
     return df1
-clean_data(merged2)
-
-
-
-
-
-
-
-merged2 = merged2.reset_index()
-
-merged2['DATE'] = merged2['DATE'].astype(str)
-unemp_wave = merged2[['DATE','Covid Wave','Unemp Rate']]
-unemp_wave = unemp_wave.set_index(['DATE','Covid Wave'])
-unemp_wave = unemp_wave.unstack().reindex(unemp_wave.index.get_level_values(0))
-df.columns = df.columns.droplevel(0)
-unemp_wave
-
-wave = ['Pre-Corona','First Wave', 'Second Wave','Third Wave']
-a = a[wave]
-a = a.reset_index()
-
+unemp_wave = clean_data(merged2)
 
 # save the data for interactive plots
-check_exist(merged2,'Dataframe with Waves.csv')
+check_exist(unemp_wave,'Dataframe for Plotting.csv')
 
 
 
