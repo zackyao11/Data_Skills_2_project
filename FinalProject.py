@@ -89,7 +89,7 @@ ax.get_legend().set_bbox_to_anchor((0.1, 0.2))
 
 
 # Plotting into a GIF  (Commented out because it takes too long to run, but it generates the attached gif)
-
+'''
 image_frames = []
 
 params = {'legend.fontsize': 30,
@@ -136,7 +136,7 @@ image_frames[0].save('COVID-19 WORLD6.gif', format = 'GIF',
 f.close()
 
 
-
+'''
 # ----------- Mapping Covid Data in the United States, by County  -------------
 
 us_covid_path = os.path.abspath(r'/Users/Mohamed/Documents/GitHub/Data_Skills_2_project/us-counties.csv')
