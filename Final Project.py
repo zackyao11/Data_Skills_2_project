@@ -9,14 +9,19 @@ import warnings
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.simplefilter(action='ignore', category=FutureWarning) #JL: be careful ignoring future warnings
 
+"""
+General grading comments:
+- Matplotlib operations should be performed on axis and figure objects, not on plt
+- You made good use of functions, but had code that still could have been organized into them
+"""
 
 path = r'/Users/suxinyun/Documents/GitHub/Data_Skills_2_project/'
 
 # download data from fred
 # because the data are directly downloaded from fred, there are no initial, unmodified dataframes in the repository
-start = datetime.datetime(2019,10,1)
+start = datetime.datetime(2019,10,1) #JL: instead of globals, pass these as arguments into load_data
 end = datetime.datetime(2020,9,1)
 def load_data(category, colname):
     df = web.DataReader(category, 'fred', start, end)
