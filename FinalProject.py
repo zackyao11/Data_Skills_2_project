@@ -18,6 +18,13 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB 
 from sklearn import metrics 
 
+"""
+General grading comments:
+- Very nice gif plots; the only change would be to remove the floating points from the legend
+- Your code has no functions
+- This is a good project; if you had organized it into functions it probably would have been worth 100%
+"""
+
 # ---------- Mapping COVID cases Globally ----------------
 
 # Load Johns Hopkins covid-19 data
