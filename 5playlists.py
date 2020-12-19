@@ -1,4 +1,4 @@
-import functions as func
+import functions as func #JL: this library probably needs a citation to explain why you're using it
 import json
 from songs import Songs
 import time
@@ -6,7 +6,7 @@ import time
 
 class Playlists(Songs):
     def __init__(self):
-        super().__init__()
+        super().__init__() #JL: I imagine you should have a citation for this
         self.playlists = []
         self.keyword = ''
 
@@ -14,7 +14,7 @@ class Playlists(Songs):
         try:
             with open('res/'+st.search_keyword+'.json', encoding='UTF-8') as f:
                 p_json = json.load(f)
-        except FileNotFoundError:
+        except FileNotFoundError: #JL: good use of try/except
             url = 'http://music.163.com/api/search/get/web?csrf_token=hlpretag=&hlposttag=&s={' \
                   + st.search_keyword + '}&type=1000&offset=0&total=true&limit=' + str(st.result_limit)
             p_json = func.get_page(url).json()
