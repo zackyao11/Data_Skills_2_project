@@ -6,7 +6,7 @@ import re
 import functions as func
 
 
-class Songs:
+class Songs: #JL: docstrings would be very useful
     def __init__(self):
         # Initial playlist
         self.songs = {}
@@ -67,7 +67,7 @@ class Songs:
             duration=content['songs'][0]['duration']
             score= content['songs'][0]['score']
 
-            if  name is not None and name!='':
+            if  name is not None and name!='': #JL: if name not in [None, '']
                 self.songs['songer'].append(name)
             else:
                 self.songs['songer'].append('UnKown')
