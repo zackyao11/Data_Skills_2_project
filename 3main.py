@@ -28,7 +28,7 @@ def single_playlist():
 
 
 if __name__ == "__main__":
-    st = Settings()
+    st = Settings() #JL: this long bit of code should be organized into functions also
     # Create a new word pool
     st.search_keyword = '中文说唱'
     st.playlist_title = '中文说唱'
