@@ -8,6 +8,14 @@ import functions as func
 from collections import Counter
 from tabulate import tabulate
 
+"""
+General grading comments:
+- Your code would benefit from better comments or docstrings
+- Some of your functions tend to get too long, which makes the code in them hard to follow - try to break long functions into 
+  smaller, logical subsections
+- Your plots generally look nice, and show effort at improving them.  Some still need work, like the one with pie charts where labels overlap
+- You clearly put a ton of work into this, and it's a good project.  The amount of extra work on a solo project offsets some other lost points.
+"""
 
 class WordPool:
     def __init__(self):
