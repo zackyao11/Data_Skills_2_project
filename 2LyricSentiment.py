@@ -29,7 +29,7 @@ import pandas as pd
 import numpy as np
 import os
 
-def RAP_sentiment(Name):
+def RAP_sentiment(Name): #JL: name should be lowercase, and this function would work better broken up into multiple smaller functions
     # sentiment
      # int
      # Indicates the result of emotional polarity classification, -1: negative, 0: neutral, 1: positive
@@ -41,8 +41,8 @@ def RAP_sentiment(Name):
      # Indicates the probability of belonging to the positive category, the value range is [0, 1]
      # negative_prob
      # float
-     # Indicates the probability of belonging to the negative category, the value range is [0, 1]
-    local_main2 = './res/'+Name+'-Emotion_classification.csv'
+     # Indicates the probability of belonging to the negative category, the value range is [0, 1] #JL: you can use a docstring here: https://www.python.org/dev/peps/pep-0257/
+    local_main2 = './res/'+Name+'-Emotion_classification.csv' #JL: use os
     if not os.path.exists(local_main2):
         # Download playlist recursively
         data = pd.DataFrame(columns = ['song_id','song_name','song_songer','song_publishTime','sentiment','confidence','positive_prob','negative_prob'])
@@ -52,7 +52,7 @@ def RAP_sentiment(Name):
         return
     access_token='24.65051f487401f5c9d61249a0aa7634dd.2592000.1609323856.282335-23069052' 
     http=urllib3.PoolManager()
-    if Name=='Chinese_Rap':
+    if Name=='Chinese_Rap': #JL: be consistent with your spaces here; per PEP8 you shoul write: if name == '...':
         url='https://aip.baidubce.com/rpc/2.0/nlp/v1/sentiment_classify?access_token='+access_token
     elif Name=='English_Rap':
         url = 'https://aip.baidubce.com/rpc/2.0/nlp/v1/sentiment_classify?access_token=' + access_token+'&charset=UTF-8'
@@ -60,13 +60,13 @@ def RAP_sentiment(Name):
     file = pd.read_csv('./res/'+Name+'.csv',encoding="utf_8_sig",low_memory=False)
     try:
         fileout = pd.read_csv(local_main2, encoding="utf_8_sig", low_memory=False)
-    except:
+    except: #JL: generally you should not capture all exceptions - instead capture specific exceptions, e.g. except IndexError:
         fileout = pd.read_csv(local_main2, encoding="gb18030", low_memory=False)
 
     df = pd.DataFrame(file)
     df1 = pd.DataFrame(fileout)
 
-    havecodelist = list(df1['song_id'])
+    havecodelist = list(df1['song_id']) #JL: it's almost never correct to coerce Dataframe columns into lists
 
 
     confidence_s =[]
@@ -77,7 +77,7 @@ def RAP_sentiment(Name):
     n = len(df) # n=233243
 
     for i in range(n):
-        for iii in range(10000):
+        for iii in range(10000): #JL: use better names for your iterators
             #if i%50 == 0:
             print(Name+"  Emotional analysis progress of lyrics：{:.2f}%".format(100*i/n),end="\n")
             document = df[i:i+1]
@@ -102,7 +102,7 @@ def RAP_sentiment(Name):
 
                 if (i+1)%20==0:
                     time.sleep(1)
-                if lyric =='\n' or lyric=='' or lyric== '\n\n':
+                if lyric =='\n' or lyric=='' or lyric== '\n\n': #JL: if lyric in ['\n', '', '\n\n']:
                     lyric = 'NA'
                 params = {'text':lyric}
                 if Name == 'Chinese_Rap':
@@ -120,7 +120,7 @@ def RAP_sentiment(Name):
                 elif Name == 'English_Rap':
                     result = str(request.data, 'UTF-8')
                 #print(result)
-                a =json.loads(result)
+                a =json.loads(result) #JL: a and a1 are not a good variable names
                 try:
                     a1 =a['items'][0]
                 except Exception as e:
