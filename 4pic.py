@@ -30,13 +30,13 @@ def RAP_SCORE_scatter():
     df_CN = pd.read_csv(CH_path, low_memory=False)
     df_EN = pd.read_csv(EN_path, low_memory=False)
 
-    X_CN=[]
+    X_CN=[] #JL: more descriptive names
     song_score_CN=[]
     X_EN = []
     song_score_EN = []
-    for i, r in df_CN.iterrows():
+    for i, r in df_CN.iterrows(): #JL: you should almost never iterate over dataframe rows. use map or apply
         #print(int(r['song_publishTime']))
-        timeDate = time.strftime('%Y-%m-%d', time.localtime(int(r['song_publishTime'])/ 1000) )
+        timeDate = time.strftime('%Y-%m-%d', time.localtime(int(r['song_publishTime'])/ 1000) ) #JL: don't use mixed case variable names
         #print(timeDate)
         song_score_CN.append(int(r['song_score']))
         #if timeDate not in X_CN:
@@ -163,7 +163,7 @@ def RAP_year_bar():
     plt.savefig(png_path)
     print('Image saved: ', png_path)
     plt.show()
-    plt.close()
+    plt.close() #JL: plt.show() will also run close(), so you only need this if you skip show
 
 def RAP_song_company_pie():
     #exp =[0.1,0,0,0,0,0,0,0]
@@ -395,7 +395,7 @@ def RAP_sentiment_BAR():
     p2 = plt.bar(ind, S2, width,bottom=S1)  # , yerr=womenStd)
     p3 = plt.bar(ind, S3, width, bottom=d)
 
-    plt.ylabel('Percentage')
+    plt.ylabel('Percentage') #JL: these operations should all be done on the axis object
     plt.title('Comparison of emotion classification between Chinese and English rap')
     plt.xticks(ind, ('CN', 'EN'))
     plt.yticks(np.arange(0, 110, 10))
