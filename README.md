@@ -3,10 +3,10 @@
 
 
 ## Final Project: Reproducible Research
-## Autumn 2020
+## Autumn 2021
 
 
-## Due: Sunday, December 6th by midnight on GitHub
+## Due: Tuesday, December 7th by midnight on GitHub
 
 ### Project Description:
 The goal of this project is to showcase your knowledge of Python by applying it to a 
@@ -23,15 +23,15 @@ or will learn in class, such as natural language processing, PDF scraping, and s
 will be rewarded.
 
 ### Instructions
-At least one part of your project should be challenging, and exhibit your coding skills.  For 
-example, if you download two very easy datasets that are nicely structured and ready to work 
-with, maybe you create some very elaborate plots.  If you instead download a very difficult
-dataset that requires scraping unstructured data and complicated reshaping and merging, then
-maybe you create some more straight-forward plots.  If both your plots and your data are
-relatively simple, maybe you use natural language processing.  If you are in a group, you will
-likely need more than one challenging section.
+At least one part of your project should be particularly challenging, and exhibit your coding 
+skills.  For example, if you download two very easy datasets that are nicely structured and 
+ready to work with, you could create some very elaborate plots.  If you instead download a very 
+difficult dataset that requires scraping unstructured data and complicated reshaping and 
+merging, then maybe you create some more straight-forward plots.  If both your plots and your 
+data are relatively simple, maybe you use some advanced natural language processing.  If you 
+are in a group, you will need more than one challenging section.
 
-You will then spend **no more than 2-5 pages** writing your research findings up.  This is where 
+You will then spend **no more than 2-4 pages** writing your research findings up.  This is where 
 you can discuss limitations as well.  For example, if you used an OLS model and got weak results, 
 you might discuss what model you would have used in future research, or what additional data you
 would want to find, or why the OLS wasn't a good choice.  Think of this writeup as a guide to 
@@ -46,15 +46,15 @@ If there is a chance you will work in a group, do not create an individual repos
 commit any code.  Wait until you form a group, and then create a group repo.  *Once code has*
 *been committed to a project, no group may be formed or added to.*
 
-It is required that you use GitHub, and I will use your past commits to understand your thought
-process for partial credit, and to monitor group participation.  You will not get full credit if
-your repository does not show multiple commits as you build your project, especially for groups.
-Expectations for the scope of the project will be higher for groups than for individuals, and the
-division of labor will be up to each group.  Note again that I will be using your GitHub commit
-history in grading, so while I will lean toward giving the same grade to everyone in a group, it 
-is possible that group members will recieve different grades.
+It is required that you use GitHub Classroom, and I will use your past commits to understand your 
+thought process for partial credit, and to monitor group participation.  You will not get full 
+credit if your repository does not show multiple commits as you build your project, especially for 
+groups.  Expectations for the scope of the project will be higher for groups than for individuals, 
+and the division of labor will be up to each group.  Note again that I will be using your GitHub 
+commit history in grading, so while I will lean toward giving the same grade to everyone in a group, 
+it  is possible that group members will recieve different grades.
 
-The link to create your project repository is available [here](https://classroom.github.com/g/V85WM5hs).
+The link to create your project repository is available in the Modules section on Canvas.
 
 Any local path references must be defined in a logical way that allows me (or your groupmates)
 to clone the repository and get to work with minimal changes (e.g. no more than one line of 
@@ -63,7 +63,8 @@ result in lost points.
 
 Remote retrieval of datasets should have a method of toggling the download attempt depending on
 either a setting or by looking to see if the files are already downloaded.  This is best practice,
-and will save me from having to download data for the entire class.
+and will save me from having to download data for the entire class.  If your data is too large to
+be easily committed, as per step 2, discuss with me for the best way to accomodate it.
 
 Your final repository must contain the following: 
 1. Your code and commit history
@@ -76,15 +77,14 @@ Your final repository must contain the following:
 
 ### Suggestions and Tips:
 - Anywhere you can use things we learned in Data Skills 1 or 2, in a way that is relevant to 
-your project, is a good idea.  For example, cleaning up your plots using some MatPlotLib 
-methods we discussed is better than turning in vanilla MatPlotLib output, using formatting 
-and other functions to clean up your data is better than displaying the same output in a 
-messy fashion, and so on.
+your project, is a good idea.  For example, cleaning up your plots using advanced MatPlotLib 
+methods we discussed is better than turning in vanilla Seaborn output, even if the vanilla 
+Seaborn output looks nice.
 - You may use libraries and methods we did not go over in class, but ones that we did go over
 should be preferred if they duplicate the functionality.  Remember all citation rules from 
 the academic dishonesty policy in the syllabus.
 - Effort put into organizing your code and making it readable, by, for example, following the
-Python Style Guide and good usage of functions and variable names, will be rewarded.
+Python Style Guide and good usage of functions and variable names, will be heavily rewarded.
 - If you feel stuck coming up with research ideas, feel free to contact me or one of the TAs
 so we can discuss your interests and make suggestions.
 - Common merging and grouping parameters:
