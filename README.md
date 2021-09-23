@@ -10,8 +10,8 @@
 
 ### Project Description:
 The goal of this project is to showcase your knowledge of Python by applying it to a 
-research project of your own.  This is not a research methods course, so the quality of the
-research is ancillary to the quality of your programming.
+research project of your own.  This is not a course about your specific topic, so the quality of 
+the research is ancillary to the quality of your programming.
 
 Your task is to find a minimum of two datasets available online, and then use Python to
 download them using requests or Pandas, merge or concatenate them together, summarize the data 
