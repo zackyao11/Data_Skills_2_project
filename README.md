@@ -1,25 +1,25 @@
-# Data and Programming for Public Policy II
-# PPHA 30536
+# Data and Programming for Public Policy II - Python Programming
+# PPHA 30538
 
 
 ## Final Project: Reproducible Research
-## Autumn 2021
+## Autumn 2022
 
 
-## Due: Tuesday, December 7th by midnight on GitHub
+## Due: Tuesday, December 7th by midnight on GitHub/Gradescope
 
 ### Project Description:
 The goal of this project is to showcase your knowledge of Python by applying it to a 
 research project of your own.  This is not a course about your specific topic, so the quality of 
 the research is ancillary to the quality of your programming.
 
-Your task is to find a minimum of two datasets available online, and then use Python to
-download them using requests or Pandas, merge or concatenate them together, summarize the data 
-with plots, tables and summary statistics, and then fit a simple model to it using Numpy, 
+Your task is to find __a minimum of two datasets__ available online, and then use Python to
+__download them using requests or Pandas__, __merge or concatenate__ them together, summarize the data 
+with __plots, tables and summary statistics__, and then __fit a simple model__ to it using Numpy, 
 Scikit Learn, or Statsmodels.  The entire program must be organized using functions and/or 
 classes, and it must run from start (downloading) to finish (making graphs, displaying tables, 
 and model fitting) without stopping or requiring manual steps.  The use of other skills we have
-or will learn in class, such as natural language processing, PDF scraping, and spatial data,
+or will learn in class, such as natural language processing, PDF parsing, and spatial data,
 will be rewarded.
 
 ### Instructions
@@ -46,15 +46,15 @@ If there is a chance you will work in a group, do not create an individual repos
 commit any code.  Wait until you form a group, and then create a group repo.  *Once code has*
 *been committed to a project, no group may be formed or added to.*
 
-It is required that you use GitHub Classroom, and I will use your past commits to understand your 
+It is required that you use GitHub, and I may use your past commits to understand your 
 thought process for partial credit, and to monitor group participation.  You will not get full 
 credit if your repository does not show multiple commits as you build your project, especially for 
 groups.  Expectations for the scope of the project will be higher for groups than for individuals, 
 and the division of labor will be up to each group.  Note again that I will be using your GitHub 
 commit history in grading, so while I will lean toward giving the same grade to everyone in a group, 
-it  is possible that group members will recieve different grades.
+it is possible that group members will recieve different grades.
 
-The link to create your project repository is available in the Modules section on Canvas.
+The link to create your project repository will be available in the Modules section on Canvas.
 
 Any local path references must be defined in a logical way that allows me (or your groupmates)
 to clone the repository and get to work with minimal changes (e.g. no more than one line of 
